@@ -1,9 +1,10 @@
 var fill1 = 0;
 var fill2 = 0;
 var fill3 = 0;
-var clicks = 999;
+var clicks = 0;
 var wow = 100;
 var button;
+var level = "Beginner";
 function setup() {
 createCanvas(600, 600);
     
@@ -26,6 +27,7 @@ stroke(fill1, fill2, fill3);
     textSize(32);
     text("Clicks: " + clicks, 25, 50);
     text("Click on Enter", 200, 100);
+    text("Level: " + level, 10, 540);
     WOW();
 }
 
@@ -35,6 +37,7 @@ function resetSketch(){
     fill1 = 0;
     fill2 = 0;
     fill3 = 0;
+    level = "Beginner";
 }
 
 function keyPressed(){
@@ -70,6 +73,7 @@ if(clicks >= 100 && clicks < 300){
     wow = 100;
     textSize(26);
         text("Wow you have now clicked over " + wow + " times!", 20, 500);
+    level = "Clicker";
     }else{
         console.log("no");
     }
@@ -78,6 +82,7 @@ if(clicks >= 300 && clicks < 500){
     wow = 300;
     textSize(26);
         text("Wow you have now clicked over " + wow + " times!", 20, 500);
+    level = "Pro Clicker";
 }else{
         console.log("no");
     } 
@@ -86,6 +91,7 @@ if(clicks >= 500 && clicks < 700){
     wow = 500;
     textSize(26);
         text("Wow you have now clicked over " + wow + " times!", 20, 500);
+    level = "Master Clicker";
 }else{
         console.log("no");
     } 
@@ -94,14 +100,25 @@ if(clicks >= 500 && clicks < 700){
     wow = 700;
     textSize(26);
         text("Wow you have now clicked over " + wow + " times!", 20, 500);
+        level = "Ultra Master Clicker";
 }else{
         console.log("no");
     }
     
-    if(clicks >= 1000){
+     if(clicks >= 1000 && clicks < 1000000){
+    wow = 1000;
+    textSize(26);
+        text("Wow you have now clicked over " + wow + " times!", 20, 500);
+        level = "God Clicker";
+}else{
+        console.log("no");
+    }
+    
+    if(clicks >= 1000000){
     wow = clicks;
     textSize(26);
         text("You have clicked " + wow + " times!", 20, 500);
+        level = "Ultra God Clicker";
 } 
     
 }
