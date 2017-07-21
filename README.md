@@ -1,2 +1,2 @@
 # ButtonClicker
-A game to ply if you are bored
+A game to play if you are bored
